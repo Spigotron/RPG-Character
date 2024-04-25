@@ -18,30 +18,17 @@
         <h3>Custom RPG Character</h3>
         <form class="row needs-validation g-3 p-2" novalidate>
             <div class="form-floating col-12 col-md-6 pl-0">
-                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="name@example.com"
+                <input type="text" class="form-control" id="firstname" name="firstname" pattern="[A-Z][a-z]{1,}" placeholder="name@example.com"
                     required>
                 <label for="firstname">First Name</label>
                 <div class="valid-feedback">Right on!</div>
                 <div class="invalid-feedback">Give me yo name bro!</div>
             </div>
             <div class="form-floating col-12 col-md-6 pr-0">
-                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Password" required>
+                <input type="text" class="form-control" id="lastname" name="lastname" pattern="[A-Z][a-z]{1,}" placeholder="Password" required>
                 <label for="lastname">Last Name</label>
                 <div class="valid-feedback">Right on!</div>
                 <div class="invalid-feedback">Give me yo name bro!</div>
-            </div>
-            <div class="form-floating col-12 pr-0">
-                <input type="email" class="form-control" id="email" name="email" placeholder="Password" required>
-                <label for="email">Email</label>
-                <div class="valid-feedback">Right on!</div>
-                <div class="invalid-feedback">Give me yo email bro!</div>
-            </div>
-            <div class="form-floating col-12 pr-0">
-                <input type="password" class="form-control" id="password" name="password"
-                    pattern="[A-Z]{1,}[a-z]{1,}[\W]{1,}" placeholder="Password" required>
-                <label for="password">Password</label>
-                <div class="valid-feedback">Right on!</div>
-                <div class="invalid-feedback">Give me yo password bro!</div>
             </div>
             <select class="form-select" aria-label="Default select example">
                 <option selected>Choose your race</option>
@@ -51,18 +38,29 @@
                 <option value="3">Dwarf</option>
                 <option value="3">Dragonborn</option>
               </select>
+              <h2>Select your Class</h2>
+              <div class="row d-flex justify-content-around">
                 <div>
-                    <label for="language">Python</label>
-                    <input type="radio" name='language' value="Python">
-                </div>
-                <div class="mx-3">
-                    <label for="language">JavaScript</label>
-                    <input type="radio" name='language' value="JavaScript">
+                    <input type="radio" name='characterclass' value="Fighter">
+                    <label for="characterclass">Fighter</label>
                 </div>
                 <div>
-                    <label for="language">SQL</label>
-                    <input type="radio" name='language' value="SQL">
+                    <input type="radio" name='characterclass' value="Wizard">
+                    <label for="characterclass">Wizard</label>
                 </div>
+                <div>
+                    <input type="radio" name='characterclass' value="Rogue">
+                    <label for="characterclass">Rogue</label>
+                </div>
+                <div>
+                    <input type="radio" name='characterclass' value="Priest">
+                    <label for="characterclass">Priest</label>
+                </div>
+                <div>
+                    <input type="radio" name='characterclass' value="Archer">
+                    <label for="characterclass">Archer</label>
+                </div>
+            </div>
             </div>
             <button type="submit" class="col-4 btn btn-outline-info text-info">Submit Data</button>
         </form>
